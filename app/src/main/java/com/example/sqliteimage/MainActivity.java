@@ -64,14 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
     }
-
-    public void openImg(){
-        byte[] outImage=products.select(9);
-        ByteArrayInputStream imageStream = new ByteArrayInputStream(outImage);
-        Bitmap theImage = BitmapFactory.decodeStream(imageStream);
-        imageView.setImageBitmap(theImage);
-    }
-
+    
     public void saveInBd() {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         byteImg.compress(Bitmap.CompressFormat.PNG, 100, stream);
